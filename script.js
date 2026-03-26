@@ -108,18 +108,19 @@ function cerrarModal() {
   mostrarRanking();
 }
 
-function guardarClasificacion(nombre, puntaje, cantidad) {
-  const ranking = JSON.parse(localStorage.getItem("ranking")) || [];
-  ranking.push({ nombre, puntaje, cantidad });
-  ranking.sort((a, b) => b.puntaje - a.puntaje);
-  localStorage.setItem("ranking", JSON.stringify(ranking));
+async function guardarClasificacion(nombre, puntaje, cantidad) {
+  await fetch("/.netlify/functions/saveScore", {
+    method: "POST",
+    body: JSON.stringify({ nombre, puntaje, cantidad }),
+  });
 }
 
-function mostrarRanking() {
+async function mostrarRanking() {
   const contenedor = document.getElementById("contenedor");
   contenedor.innerHTML = "<h2>Tabla de Clasificación</h2>";
 
-  const ranking = JSON.parse(localStorage.getItem("ranking")) || [];
+  const response = await fetch("/.netlify/functions/getScores");
+  const ranking = await response.json();
 
   const tabla = document.createElement("table");
   tabla.innerHTML = `
