@@ -1,0 +1,51 @@
+[
+  {
+    "pregunta": "<!DOCTYPE _____>",
+    "opciones": ["html","css","xml","js"],
+    "respuesta": "html" },
+
+  {
+    "pregunta": "<_____ lang=\"es\">",
+    "opciones": ["html","head","body","title"],
+    "respuesta": "html" },
+
+  { 
+    "pregunta": "<a href=\"https://google.com\">_____</a>", 
+    "opciones": ["Google","Link","Click","Ir"], 
+    "respuesta": "Google" },
+
+  { 
+    "pregunta": "<img src=\"foto.jpg\" alt=\"_____\">", 
+    "opciones": ["Imagen","Foto","Alt","Texto"], 
+    "respuesta": "Imagen" },
+
+  { 
+    "pregunta": "<ul>\n  <_____>Item</li>\n</ul>", 
+    "opciones": ["li","ol","ul","dl"], 
+    "respuesta": "li" },
+
+  { 
+    "pregunta": "<table>\n  <tr>\n    <_____>Dato</td>\n  </tr>\n</table>", 
+    "opciones": ["td","th","tr","table"], 
+    "respuesta": "td" },
+
+  { 
+    "pregunta": "<form action=\"/login\">\n  <input type=\"_____\">\n</form>", 
+    "opciones": ["text","form","button","submit"], 
+    "respuesta": "text" },
+
+  { 
+    "pregunta": "<button type=\"_____\">Enviar</button>", 
+    "opciones": ["submit","button","reset","text"], 
+    "respuesta": "submit" },
+
+  { 
+    "pregunta": "<link rel=\"stylesheet\" href=\"style._____\">", 
+    "opciones": ["css","html","js","php"], 
+    "respuesta": "css" },
+
+  { 
+    "pregunta": "<script src=\"app._____\"></script>", 
+    "opciones": ["js","css","html","php"], 
+    "respuesta": "js" }
+]

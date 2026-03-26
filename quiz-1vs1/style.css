@@ -1,0 +1,152 @@
+body {
+  font-family: 'Fira Code', monospace;
+  background: #1e1e2f;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 30px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 25px;
+  color: #00ff9d;
+  text-shadow: 0 0 10px #00ff9d, 0 0 20px #00ff9d;
+  letter-spacing: 2px;
+  transition: color 1s ease;
+}
+
+h2 {
+  color: #4fc3f7;
+  margin-top: 30px;
+  text-shadow: 0 0 5px #4fc3f7;
+}
+
+.menu {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+label {
+  background: #2d2d3a;
+  color: #e0e0e0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px #4fc3f7;
+}
+
+label:hover {
+  background: #3a3a4f;
+  color: #00ff9d;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background: #4fc3f7;
+  color: #1e1e2f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #4fc3f7;
+}
+
+button:hover {
+  background: #00ff9d;
+  color: #1e1e2f;
+  box-shadow: 0 0 15px #00ff9d;
+}
+
+#contenedor {
+  margin-top: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ejercicio {
+  margin-bottom: 25px;
+  background: #2d2d3a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,255,157,0.4);
+  text-align: left;
+}
+
+.ejercicio p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #f8f8f2;
+}
+
+.ejercicio button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background: #4fc3f7;
+  color: #1e1e2f;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 8px #4fc3f7;
+}
+
+.ejercicio button:hover {
+  background: #00ff9d;
+  box-shadow: 0 0 12px #00ff9d;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #2d2d3a;
+  color: #e0e0e0;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px #00ff9d;
+  max-width: 400px;
+  width: 80%;
+}
+
+.modal-content h2 {
+  color: #00ff9d;
+  margin-bottom: 20px;
+}
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #4fc3f7;
+  color: #1e1e2f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-content button:hover {
+  background: #00ff9d;
+  box-shadow: 0 0 12px #00ff9d;
+}

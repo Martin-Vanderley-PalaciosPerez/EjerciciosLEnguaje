@@ -1,0 +1,42 @@
+[
+  { 
+    "pregunta": "p { color: _____; }", 
+    "opciones": ["red","font","background","size"], 
+    "respuesta": "red" },
+  { 
+    "pregunta": "div { background-color: _____; }", 
+    "opciones": ["blue","text","margin","border"], 
+    "respuesta": "blue" },
+  { 
+    "pregunta": "h1 { font-size: _____px; }", 
+    "opciones": ["24","big","large","font"], 
+    "respuesta": "24" },
+  { 
+    "pregunta": "body { margin: _____; }", 
+    "opciones": ["0","auto","none","padding"], 
+    "respuesta": "0" },
+  { 
+    "pregunta": ".caja { border: _____ solid black; }", 
+    "opciones": ["1px","solid","black","none"], 
+    "respuesta": "1px" },
+  { 
+    "pregunta": "#menu { display: _____; }", 
+    "opciones": ["flex","block","inline","none"], 
+    "respuesta": "flex" },
+
+  { "pregunta": "a:hover { text-decoration: _____; }", 
+    "opciones": ["underline","none","bold","italic"], 
+    "respuesta": "underline" },
+
+  { "pregunta": ".contenedor { justify-content: _____; }", 
+    "opciones": ["center","left","right","space"], 
+    "respuesta": "center" },
+
+  { "pregunta": "img { width: _____%; }", 
+    "opciones": ["100","50","25","10"], 
+    "respuesta": "100" },
+
+  { "pregunta": "p { font-family: '_____'; }", 
+    "opciones": ["Arial","Times","Verdana","Comic Sans"], 
+    "respuesta": "Arial" }
+]

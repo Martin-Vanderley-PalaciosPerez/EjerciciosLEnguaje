@@ -1,0 +1,47 @@
+[
+  {
+    "pregunta": "let x = _____;", 
+    "opciones": ["10","var","function","return"], 
+    "respuesta": "10" },
+
+  { 
+    "pregunta": "console._____(\"Hola Mundo\");", 
+    "opciones": ["log","print","write","alert"], 
+    "respuesta": "log" },
+
+  { 
+    "pregunta": "if (x _____ 5) { console.log(\"Mayor\"); }", 
+    "opciones": [">","<","==","==="], 
+    "respuesta": ">" },
+
+  { 
+    "pregunta": "function suma(a, b) { return a _____ b; }", 
+    "opciones": ["+","-","*","/"], 
+    "respuesta": "+" },
+
+  { 
+    "pregunta": "const arr = [1,2,3]; arr._____(4);", 
+    "opciones": ["push","pop","shift","unshift"], 
+    "respuesta": "push" },
+
+  { 
+    "pregunta": "for (let i = 0; i _____ 10; i++) {}", 
+    "opciones": ["<","<=","==",">"], 
+    "respuesta": "<" },
+
+  { "pregunta": "document.getElementById(\"demo\")._____ = \"Hola\";", 
+    "opciones": ["innerHTML","text","value","print"], 
+    "respuesta": "innerHTML" },
+
+  { "pregunta": "Math._____(9);", 
+    "opciones": ["sqrt","pow","round","floor"], 
+    "respuesta": "sqrt" },
+
+  { "pregunta": "JSON._____(obj);", 
+    "opciones": ["stringify","parse","convert","toString"], 
+    "respuesta": "stringify" },
+    
+  { "pregunta": "setTimeout(() => { console.log(\"Hola\"); }, _____);", 
+    "opciones": ["1000","1","10","500"], 
+    "respuesta": "1000" }
+]
