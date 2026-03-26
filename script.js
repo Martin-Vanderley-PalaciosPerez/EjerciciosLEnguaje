@@ -97,7 +97,7 @@ function mezclarArray(array) {
 function mostrarModal() {
   const modal = document.getElementById("modal");
   const resultado = document.getElementById("resultado");
-  resultado.textContent = `${nombreJugador} tu puntuación final es: ${puntaje} / ${cantidadPreguntas}`;
+  resultado.textContent = `${nombreJugador} elegiste ${cantidadPreguntas} preguntas y tu puntuación final es: ${puntaje} / ${cantidadPreguntas}`;
   modal.style.display = "flex";
 
   guardarClasificacion(nombreJugador, puntaje, cantidadPreguntas);
@@ -108,24 +108,36 @@ function cerrarModal() {
   mostrarRanking();
 }
 
+// 🔹 Guardar puntaje en el servidor (Netlify Function)
 async function guardarClasificacion(nombre, puntaje, cantidad) {
-  await fetch("/.netlify/functions/saveScore", {
-    method: "POST",
-    body: JSON.stringify({ nombre, puntaje, cantidad }),
-  });
+  try {
+    await fetch("/.netlify/functions/saveScore", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ nombre, puntaje, cantidad }),
+    });
+  } catch (error) {
+    console.error("Error al guardar puntaje:", error);
+  }
 }
 
+// 🔹 Obtener ranking desde el servidor (Netlify Function)
 async function mostrarRanking() {
   const contenedor = document.getElementById("contenedor");
   contenedor.innerHTML = "<h2>Tabla de Clasificación</h2>";
 
-  const response = await fetch("/.netlify/functions/getScores");
-  const ranking = await response.json();
+  try {
+    const response = await fetch("/.netlify/functions/getScores");
+    const ranking = await response.json();
 
-  const tabla = document.createElement("table");
-  tabla.innerHTML = `
-    <tr><th>Jugador</th><th>Puntaje</th><th>Preguntas</th></tr>
-    ${ranking.map(r => `<tr><td>${r.nombre}</td><td>${r.puntaje}</td><td>${r.cantidad}</td></tr>`).join("")}
-  `;
-  contenedor.appendChild(tabla);
+    const tabla = document.createElement("table");
+    tabla.innerHTML = `
+      <tr><th>Jugador</th><th>Puntaje</th><th>Preguntas</th></tr>
+      ${ranking.map(r => `<tr><td>${r.nombre}</td><td>${r.puntaje}</td><td>${r.cantidad}</td></tr>`).join("")}
+    `;
+    contenedor.appendChild(tabla);
+  } catch (error) {
+    console.error("Error al obtener ranking:", error);
+    contenedor.innerHTML += "<p>No se pudo cargar la tabla de clasificación.</p>";
+  }
 }
